@@ -51,7 +51,7 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({
                 height={14.37}
               />
             </span>
-            Peer Reviewed
+            Published
           </div>
         </div>
       </main>
