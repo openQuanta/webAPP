@@ -1,4 +1,4 @@
-import { ResearchCard } from "@/components/ui/ResearchCard";
+import { ResearchCard } from "@/components/ResearchCard";
 import { Bell, ListFilter, Search } from "lucide-react";
 import Image from "next/image";
 
@@ -14,6 +14,7 @@ const demoData = [
     likes: 12,
     comments: 28,
     reads: 12,
+    imageSrc: "/asset/frame1.png",
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ const demoData = [
     likes: 12,
     comments: 28,
     reads: 12,
+    imageSrc: "/asset/frame2.png",
   },
   {
     id: 3,
@@ -38,6 +40,7 @@ const demoData = [
     likes: 12,
     comments: 28,
     reads: 12,
+    imageSrc: "/asset/frame3.png",
   },
   {
     id: 4,
@@ -50,12 +53,19 @@ const demoData = [
     likes: 12,
     comments: 28,
     reads: 12,
+    imageSrc: "/asset/frame4.png",
   },
 ];
 
 export default function Home() {
   return (
     <>
+
+
+
+
+
+
       <header className="text-white w-[1416px] h-[47px] bg-white/4 flex justify-between items-center">
         <main>
           <Image src="horizontal-logo.svg" alt="logo" width={64} height={15} />

@@ -13,6 +13,7 @@ interface ResearchCardProps {
   likes: number;
   comments: number;
   reads: number;
+  imageSrc: string;
 }
 
 export const ResearchCard: React.FC<ResearchCardProps> = ({
@@ -25,14 +26,22 @@ export const ResearchCard: React.FC<ResearchCardProps> = ({
   likes,
   comments,
   reads,
+  imageSrc,
 }) => {
   return (
     <article className="w-[284px] h-[497px] rounded-[8px] border-[0.5] border-white/5 bg-white/4 p-0.5 ">
-      <main className="bg-pink-700 w-full h-[244.68px] border-[0.36px] border-white/16 rounded-[5.68px] pt-[6.17px] pl-[4.89px] pb-[6.17px] pr-[7.65px] flex flex-col justify-between">
-        <div className="px-[11.36px] py-[5.68px] rounded-[4.26px] w-fit bg-white/5 border-[0.71px] border-white/5 text-[8.52px] font-normal text-white">
+      <main className="relative w-full h-[244.68px] border-[0.36px] border-white/16 rounded-[5.68px] pt-[6.17px] pl-[4.89px] pb-[6.17px] pr-[7.65px] flex flex-col justify-between overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt="research-image"
+          layout="fill"
+          objectFit="cover"
+          className="absolute inset-0 w-full h-full "
+        />
+        <div className="px-[11.36px] py-[5.68px] rounded-[4.26px] w-fit bg-white/5 border-[0.71px] border-white/5 text-[8.52px] font-normal text-white z-10">
           {date}
         </div>
-        <div className="flex justify-end">
+        <div className="flex justify-end z-10">
           <div className="px-[11.36px] py-[5.68px] rounded-[4.26px] w-fit flex items-center gap-[6px] bg-[#024E21]  text-[8.52px] font-normal text-white">
             <span>
               <Image

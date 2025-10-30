@@ -1,3 +1,6 @@
+import AnimatedBackground from "@/components/AnimatedBackground";
+import { AppSidebar } from "@/components/AppSidebar";
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -20,7 +23,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={halenoir.variable}>
-      <body>{children}</body>
+      <body>
+        <AnimatedBackground />
+       
+        <div className="flex">
+          <AppSidebar />
+          <main className="flex-1 p-8">
+            {children}
+          </main>
+        </div>
+      </body>
     </html>
   );
 }

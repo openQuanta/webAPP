@@ -68,7 +68,7 @@
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
+  --sidebar: oklch(1 0 0 / 0.04);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
   --sidebar-primary-foreground: oklch(0.985 0 0);
@@ -119,5 +119,31 @@
   }
   body {
     @apply bg-app-black text-foreground;
+    
   }
 }
+
+@keyframes wander {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(50vw, 50vh);
+  }
+  50% {
+    transform: translate(25vw, 75vh);
+  }
+  75% {
+    transform: translate(-25vw, 50vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.animate-wander {
+  animation: wander 20s ease-in-out infinite;
+}
+
+
+
